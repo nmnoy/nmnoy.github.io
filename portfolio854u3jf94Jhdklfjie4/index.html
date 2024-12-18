@@ -35,7 +35,11 @@
       font-size: 18px;
       font-weight: normal;
     }
+    span {
+      font-size: 16px;
+    }
     ul {
+      margin-top: 30px;
       font-size: 14px;
       padding-left: 20px;
       list-style: none;
@@ -47,6 +51,28 @@
     a {
       text-decoration: underline;
       color: darkblue;
+      text-decoration: none;
+      position: relative;
+      background-image: linear-gradient(90deg, #fcf69f, #fcf69f);
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 0 0%;
+      transition: all 0.4s ease;
+    }
+    /* a:before {
+      content: '';
+      position: absolute;
+      bottom: -0.1em;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #000;
+      transition: 0.4s;
+    } */
+    a:hover {
+      /* width: 100%;
+      transition: 0.4s; */
+      background-size: 100% 60%; /* マーカーの横幅を100%にする */
     }
   </style>
 </head>
@@ -56,22 +82,22 @@
   <ul>
     <!-- <li><a href="./brab/" target="_blank">B-RAVE ONE（コーディング）</a></li> -->
     <!-- <li><a href="./freemo/" target="_blank">freemo（コーディング）</a></li> -->
-    <li><a href="./fuwato/" target="_blank">fuwato（コーディング）</a></li>
-    <!-- <li><a href="./ctcdx/" target="_blank">CTCDX（コーディング）</a></li> -->
-    <!-- <li><a href="./moncler_index/" target="_blank">MONCLER（コーディング）</a></li> -->
-    <!-- <li><a href="./moncler_women/" target="_blank">MONCLER_WOMEN（コーディング）</a></li> -->
-    <li><a href="./itagaki/" target="_blank">板垣 瑞生プロフィールページ（コーディング）</a></li>
-    <li><a href="./ims/" target="_blank">IMS（コーディング）</a></li>
-    <li><a href="./zgk_index/" target="_blank">全銀協LP（コーディング）</a></li>
-    <li><a href="./zgk_shindan/" target="_blank">全銀協LP診断ページ（コーディング）</a></li>
-    <li><a href="./rehaview/" target="_blank">MEDICAL VIEW01（デザイン・コーディング）</a></li>
-    <li><a href="./mmt/" target="_blank">MEDICAL VIEW02（デザイン・コーディング）</a></li>
-    <li><a href="./os/" target="_blank">MEDICAL VIEW03（デザイン・コーディング）</a></li>
-    <li><a href="https://sandland.jp/" target="_blank">サンドランドポータルサイト（コーディング）※外部リンク</a></li>
-    <li><a href="https://iamaim.jp/" target="_blank">IAM（コーディング・WP構築）※外部リンク</a></li>
-    <li><a href="https://www.regalo-vet.com/" target="_blank">どうぶつの病院レガーロ（コーディング・WP構築）※外部リンク</a></li>
-    <li><a href="https://www.asukoe.co.jp/" target="_blank">アスコエパートナーズ（コーディング・WP構築）※外部リンク</a></li>
-    <li><a href="http://www.okuwakiseimitsu.com/" target="_blank">オクワキ精密（デザイン・コーディング・WP構築）※外部リンク</a></li>
+    <li><a href="./fuwato/" target="_blank"><span>fuwato</span>（コーディング）</a></li>
+    <!-- <li><a href="./ctcdx/" target="_blank"><span>CTCDX（コーディング）</a></li> -->
+    <!-- <li><a href="./moncler_index/" target="_blank"><span>MONCLER（コーディング）</a></li> -->
+    <!-- <li><a href="./moncler_women/" target="_blank"><span>MONCLER_WOMEN（コーディング）</a></li> -->
+    <li><a href="./itagaki/" target="_blank"><span>板垣 瑞生プロフィールページ</span>（コーディング）</a></li>
+    <li><a href="./ims/" target="_blank"><span>IMS</span>（コーディング）</a></li>
+    <li><a href="./zgk_index/" target="_blank"><span>全銀協LP</span>（コーディング）</a></li>
+    <li><a href="./zgk_shindan/" target="_blank"><span>全銀協LP診断ページ</span>（コーディング）</a></li>
+    <li><a href="https://sandland.jp/" target="_blank"><span>サンドランドポータルサイト</span>（コーディング）※外部リンク</a></li>
+    <li><a href="./rehaview/" target="_blank"><span>MEDICAL VIEW01</span>（デザイン・コーディング）</a></li>
+    <li><a href="./mmt/" target="_blank"><span>MEDICAL VIEW02</span>（デザイン・コーディング）</a></li>
+    <li><a href="./os/" target="_blank"><span>MEDICAL VIEW03</span>（デザイン・コーディング）</a></li>
+    <li><a href="https://iamaim.jp/" target="_blank"><span>IAM</span>（コーディング・WP構築）※外部リンク</a></li>
+    <li><a href="https://www.regalo-vet.com/" target="_blank"><span>どうぶつの病院レガーロ</span>（コーディング・WP構築）※外部リンク</a></li>
+    <li><a href="https://www.asukoe.co.jp/" target="_blank"><span>アスコエパートナーズ</span>（コーディング・WP構築）※外部リンク</a></li>
+    <li><a href="http://www.okuwakiseimitsu.com/" target="_blank"><span>オクワキ精密</span>（デザイン・コーディング・WP構築）※外部リンク</a></li>
     
   </ul>
 
