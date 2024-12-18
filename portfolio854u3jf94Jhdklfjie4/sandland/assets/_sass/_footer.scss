@@ -1,0 +1,126 @@
+#page-top {
+  position: fixed;
+  // @include bottom(90);
+  @include right(24);
+  @include spright(10);
+  line-height: 1;
+  z-index: 99;
+  // @include wide(90);
+  // @include spwide(90);
+  // @include height(90);
+  // @include spheight(90);
+  transition: 0.4s;
+}
+#page-top a {
+  position: relative;
+  background: #FF8F3D;
+  .filmbddvd & {
+    background: #0BBDFC;
+  }
+  text-decoration: none;
+  color: #fff;
+  @include wide(60);
+  @include spwide(60);
+  @include height(60);
+  @include spheight(60);
+  text-align: center;
+  display: block;
+  border-radius: 90px;
+  transition: 0.4s;
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    opacity: 1;
+    background: #fff;
+    @include wide(18);
+    @include height(22);
+    @include spwide(18);
+    @include spheight(22);
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    mask: url(../img/arrow_w_short.svg) center center / contain no-repeat;
+  }
+  @include media-tbpc {
+    &:hover {
+      background: #fff;
+      &:before {
+        background: #FF8F3D;
+        .filmbddvd & {
+          background: #0BBDFC;
+        }
+      }
+    }
+  }
+}
+footer {
+  background: #fff;
+  @include padding(30,0,30,0);
+  @include sppadding(19,0,20,0);
+  position: relative;
+  background: #fff;
+  border-top: 8px solid #000;
+  .inner {
+    position: relative;
+    max-width: 1440px;
+    // width: 100%;
+    @include wide(1440);
+    margin: 0 auto;
+    @include padding(0,50,0,50);
+    @include sppadding(0,0,0,0);
+    @include media-sp {
+      width: 100%;
+    }
+  }
+  .in {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-sp {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .l {
+    font-weight: 400;
+    @include fz(12);
+    @include spfz(12);
+    a {
+      text-decoration: underline;
+      color: #000 !important;
+      @include media-tbpc {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .t01 {
+    }
+    .t02 {
+      margin-top: 1em;
+      @include media-sp {
+        margin-top: 1em;
+      }
+    }
+  }
+  .r {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-start;
+    @include media-sp {
+      flex-direction: column;
+      margin-top: 1em;
+    }
+  }
+  .copy {
+    text-align: center;
+    font-weight: 400;
+    @include fz(12);
+    @include spfz(12);
+  }
+}

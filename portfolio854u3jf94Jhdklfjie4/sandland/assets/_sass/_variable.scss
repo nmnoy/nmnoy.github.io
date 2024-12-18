@@ -1,0 +1,466 @@
+//色
+
+//---------------------------------------------------------
+//メディアクエリ
+
+@mixin media-sp {//SP
+	@media only screen and (max-width: 767.98px) {
+		@content;
+	}
+}
+
+@mixin media-tbpc {
+	@media print, screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin media-sptb {//PC以下
+	@media screen and (max-width: 1439.98px) {
+		@content;
+	}
+}
+
+@mixin media-pc {//PC
+	@media screen and (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin media-u1200 {
+	@media screen and (max-width: 1199.98px) {
+		@content;
+	}
+}
+
+@mixin media-tb {
+	@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+		@content;
+	}
+}
+
+
+//---------------------------------------------------------
+//イージング
+
+//Default
+$linear: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+$ease: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+$ease-in: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+$ease-out: cubic-bezier(0.000, 0.000, 0.580, 1.000);
+$ease-in-out: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+//In
+$ease-in-quad: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$ease-in-cubic: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$ease-in-quart: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$ease-in-quint: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$ease-in-sine: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$ease-in-expo: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$ease-in-circ: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$ease-in-back: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+//Out
+$ease-out-quad: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$ease-out-cubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$ease-out-quart: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$ease-out-quint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$ease-out-sine: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$ease-out-circ: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+//In-Out
+$ease-in-out-quad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$ease-in-out-quart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$ease-in-out-quint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$ease-in-out-sine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$ease-in-out-expo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+
+
+//デザインデータ基準
+$contentPc: 1440;
+$contentSp: 390;
+//
+
+@mixin top($px) {
+  top: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    top: $px + px;
+  }
+  @include media-sp {
+    top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin bottom($px) {
+  bottom: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    bottom: $px + px;
+  }
+  @include media-sp {
+    bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin left($px) {
+  left: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    left: $px + px;
+  }
+  @include media-sp {
+    left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin right($px) {
+  right: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    right: $px + px;
+  }
+  @include media-sp {
+    right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+//
+@mixin sptop($px) {
+  @include media-sp {
+    top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin spbottom($px) {
+  @include media-sp {
+    bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin spleft($px) {
+  @include media-sp {
+    left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+@mixin spright($px) {
+  @include media-sp {
+    right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+////
+@mixin wide($px) {
+  width: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  max-width: $px + px;
+}
+@mixin minwide($px) {
+  min-width: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    min-width: $px + px;
+  }
+}
+@mixin height($px) {
+  height: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    height: $px + px;
+  }
+}
+@mixin minheight($px) {
+  min-height: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    min-height: $px + px;
+  }
+}
+
+@mixin spwide($px) {
+  @include media-sp {
+    width: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+    max-width: none;
+  }
+}
+@mixin spminwide($px) {
+  @include media-sp {
+    min-width: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+@mixin spheight($px) {
+  @include media-sp {
+    height: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+@mixin spminheight($px) {
+  @include media-sp {
+    min-height: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+///
+
+@mixin radius($px1,$px2,$px3,$px4) {
+  border-radius: calc( var(--vw) * calc(#{$px1} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px3} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px4} / #{$contentPc} * 100));
+	@include media-pc {
+		border-radius: $px1 + px $px2 + px $px3 + px $px4 + px;
+	}
+}
+
+@mixin spradius($px1,$px2,$px3,$px4) {
+  @include media-sp {
+    border-radius: calc( var(--vw) * calc(#{$px1} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px3} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px4} / #{$contentSp} * 100));
+	}
+}
+
+@mixin bwide($px1,$px2,$px3,$px4) {//border-width
+	border-width: calc( var(--vw) * calc(#{$px1} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px3} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px4} / #{$contentPc} * 100));
+	@include media-pc {
+		border-width: $px1 + px $px2 + px $px3 + px $px4 + px;
+	}
+}
+
+@mixin spbwide($px1,$px2,$px3,$px4) {
+  @include media-sp {
+    border-width: calc( var(--vw) * calc(#{$px1} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px3} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px4} / #{$contentSp} * 100));
+	}
+}
+
+/////////////////////////
+//PC font-size
+/////////////////////////
+
+@mixin fz($px) {
+  font-size: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+	@include media-pc {
+		font-size: $px + px;
+	}
+}
+
+/////////////////////////
+//SP font-size
+/////////////////////////
+
+@mixin spfz($px) {
+  @include media-sp {
+    font-size: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC gap
+/////////////////////////
+
+@mixin gap($px1,$px2) {
+	gap: calc( var(--vw) * calc(#{$px1} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentPc} * 100));
+	@include media-pc {
+		gap: $px1 + px $px2 + px;
+	}
+}
+
+/////////////////////////
+//SP gap
+/////////////////////////
+
+@mixin spgap($px1,$px2) {
+  @include media-sp {
+    gap: calc( var(--vw) * calc(#{$px1} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentSp} * 100));
+	}
+}
+
+/////////////////////////
+//PC padding
+/////////////////////////
+
+@mixin padding($px1,$px2,$px3,$px4) {
+	padding: calc( var(--vw) * calc(#{$px1} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px3} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px4} / #{$contentPc} * 100));
+	@include media-pc {
+		padding: $px1 + px $px2 + px $px3 + px $px4 + px;
+	}
+}
+
+/////////////////////////
+//SP padding
+/////////////////////////
+
+@mixin sppadding($px1,$px2,$px3,$px4) {
+  @include media-sp {
+    padding: calc( var(--vw) * calc(#{$px1} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px3} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px4} / #{$contentSp} * 100));
+	}
+}
+
+
+/////////////////////////
+//PC margin
+/////////////////////////
+
+@mixin margin($px1,$px2,$px3,$px4) {
+	margin: calc( var(--vw) * calc(#{$px1} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px3} / #{$contentPc} * 100)) calc( var(--vw) * calc(#{$px4} / #{$contentPc} * 100));
+	@include media-pc {
+		margin: $px1 + px $px2 + px $px3 + px $px4 + px;
+	}
+}
+
+/////////////////////////
+//SP margin
+/////////////////////////
+
+@mixin spmargin($px1,$px2,$px3,$px4) {
+  @include media-sp {
+    margin: calc( var(--vw) * calc(#{$px1} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px2} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px3} / #{$contentSp} * 100)) calc( var(--vw) * calc(#{$px4} / #{$contentSp} * 100));
+	}
+}
+
+/////////////////////////
+//PC margin-top
+/////////////////////////
+
+@mixin mt($px) {
+  margin-top: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    margin-top: $px + px;
+  }
+}
+
+/////////////////////////
+//SP margin-top
+/////////////////////////
+@mixin spmt($px) {
+  @include media-sp {
+    margin-top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC margin-bottom
+/////////////////////////
+
+@mixin mb($px) {
+  margin-bottom: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    margin-bottom: $px + px;
+  }
+}
+
+/////////////////////////
+//SP margin-bottom
+/////////////////////////
+@mixin spmb($px) {
+  @include media-sp {
+    margin-bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC margin-left
+/////////////////////////
+
+@mixin ml($px) {
+  margin-left: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    margin-left: $px + px;
+  }
+}
+
+/////////////////////////
+//SP margin-left
+/////////////////////////
+@mixin spml($px) {
+  @include media-sp {
+    margin-left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC margin-right
+/////////////////////////
+
+@mixin mr($px) {
+  margin-right: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    margin-right: $px + px;
+  }
+}
+
+/////////////////////////
+//SP margin-right
+/////////////////////////
+@mixin spmr($px) {
+  @include media-sp {
+    margin-right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+
+/////////////////////////
+//PC padding-top
+/////////////////////////
+//
+@mixin pt($px) {
+  padding-top: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    padding-top: $px + px;
+  }
+}
+
+/////////////////////////
+//SP padding-top
+/////////////////////////
+@mixin sppt($px) {
+  @include media-sp {
+    padding-top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC padding-bottom
+/////////////////////////
+
+@mixin pb($px) {
+  padding-bottom: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    padding-bottom: $px + px;
+  }
+}
+
+/////////////////////////
+//SP padding-bottom
+/////////////////////////
+@mixin sppb($px) {
+  @include media-sp {
+    padding-bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC padding-left
+/////////////////////////
+
+@mixin pl($px) {
+  padding-left: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    padding-left: $px + px;
+  }
+}
+
+/////////////////////////
+//SP padding-left
+/////////////////////////
+@mixin sppl($px) {
+  @include media-sp {
+    padding-left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC padding-right
+/////////////////////////
+
+@mixin pr($px) {
+  padding-right: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    padding-right: $px + px;
+  }
+}
+
+/////////////////////////
+//SP padding-right
+/////////////////////////
+@mixin sppr($px) {
+  @include media-sp {
+    padding-right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
