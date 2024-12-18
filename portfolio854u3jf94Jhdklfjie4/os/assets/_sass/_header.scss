@@ -1,0 +1,120 @@
+header {
+	border-top: 20px solid #00479d;
+	height: 504px;
+	background: url(../img/bg.png) 0 0 repeat;
+	@include media-sp {
+		height: auto;
+		border-top: 2vw solid #00479d;
+	}
+	.in {
+		max-width: 980px;
+		margin: 0 auto;
+		height: 100%;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include media-sp {
+			flex-direction: column;
+		}
+	}
+	.logo {
+		height: 100%;
+		@include media-sp {
+			height: auto;
+			width: 100%;
+		}
+		img {
+			height: 100%;
+			max-width: none;
+			@include media-sp {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.lead {
+		text-align: right;
+		@include media-sp {
+			text-align: center;
+			padding: 10vw 2vw 12vw;
+		}
+		span {
+			display: inline-block;
+			img {
+				vertical-align: bottom;
+			}
+		}
+		.t1 {
+			width: 574px;
+			@include media-sp {
+				width: 86%;
+			}
+		}
+		.t2 {
+			margin-top: 20px;
+			width: 570px;
+			@include media-sp {
+				width: 92%;
+				margin-top: 2vw;
+			}
+		}
+		.t3 {
+			margin-top: 6px;
+			width: 500px;
+			@include media-sp {
+				width: 80%;
+				margin-top: 1vw;
+			}
+		}
+		.btn {
+			position: relative;
+			margin: 1em 0.3em 0 auto;
+			background-color: #de3d63;
+			box-shadow: 0px 4px 0px #932741;
+			border-radius: 6px;
+			display: table;
+			font-weight: 700;
+			color: #fff;
+			width: 380px;
+			font-size: 28px;
+			padding: 0.3em 0;
+			letter-spacing: 0.08em;
+			text-align: center;
+			@include media-sp {
+				margin: 6vw auto 0;
+				width: 70%;
+		    font-size: 4vw;
+				box-shadow: 0px 1.2vw 0px #932741;
+			}
+			&:hover {
+				box-shadow: 0px 2px 0px #932741;
+				transform: translateY(2px);
+				@include media-sp {
+					box-shadow: 0px 0.6vw 0px #932741;
+					transform: translateY(1vw);
+				}
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 1em;
+				transform: translate(0,-60%) rotate(-135deg);
+				display: inline-block;
+				border-top: 6px solid #fff;
+				border-left: 6px solid #fff;
+				border-right: 6px solid transparent;
+				border-bottom: 6px solid transparent;
+				z-index: 1;
+				@include media-sp {
+					border-top: 1vw solid #fff;
+					border-left: 1vw solid #fff;
+					border-right: 1vw solid transparent;
+					border-bottom: 1vw solid transparent;
+				}
+			}
+		}
+	}
+}

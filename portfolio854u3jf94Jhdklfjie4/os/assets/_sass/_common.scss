@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Condensed:wght@300&family=Roboto:wght@400;500;700&display=swap');
+/****************************************
+
+GENERAL SETTING
+
+*****************************************/
+$regular: 'Roboto','Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+$base: #000;
+// $orange: #ff7a21;
+
+//vwのスクロールバー分マイナス
+:root {
+  --vw: 1vw;
+}
+
+/* --vwに置き換える場合 */
+// .style {
+//   width: 50vw
+//   ↓
+//   width: calc( var(--vw) * 50 );
+// }
+
+*,
+*:after,
+*:before {
+
+	box-sizing: border-box;
+}
+html{
+  height: -webkit-fill-available;
+}
+
+body,
+html {
+	position: relative;
+	background: #fff;
+	color: $base;
+	font-family: $regular;
+	// font-size: 1.23vw;
+	font-size: 1.19vw;
+	line-height: 1.8;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	text-align: left;
+	// text-align: justify;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	font-feature-settings: "palt";
+	font-feature-settings: "pkna";
+	@include media-pc {
+		font-size: 16px;
+	}
+	@include media-sp {
+		line-height: 2.0;
+		font-size: 4.27vw;
+	}
+}
+
+section {
+	@include media-sp {
+		overflow-x: hidden;
+	}
+}
+strong {
+	font-weight: 700;
+}
+.medium {
+	font-weight: 500 !important;
+}
+.reg {
+	font-weight: 400 !important;
+}
+.big {
+	font-size: 1.5em;
+}
+.small {
+	font-size: 0.8em;
+}
+.color_base {
+	color: $base !important;
+}
+.preload {
+	transition: 0s !important;
+}
+
+a {
+	text-decoration: none;
+	@include transition(ease 0.4s);
+	&:link {
+		color: $base;
+	}
+
+	&:hover {
+		color: $base;
+	}
+
+	&:visited {
+		color: $base;
+	}
+
+	&:active {
+		color: $base;
+	}
+}
+
+sup {
+	vertical-align: super;
+	position: relative;
+	top: 0.2em;
+	span {
+		&:after {
+			content: none !important;
+		}
+	}
+	&.big {
+	}
+}
+@mixin fullsize {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}
+.fullsize {
+	@include fullsize;
+}
+@mixin trans {
+	transition: all .4s;
+}
+a.fade,
+div.fade,
+input.fade {
+	@include transition(ease 0.4s);
+	opacity: 1;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+@mixin fade {
+	@include trans;
+	opacity: 1;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.tdeco_under {
+	text-decoration: underline;
+}
+
+img {
+	vertical-align: top;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.none {
+	display: none !important;
+}
+
+
+.floatL {
+	float: left;
+}
+.floatR {
+	float: right;
+}
+
+.floatNone {
+	float: none;
+}
+.spfloatNone {
+	@include media-sp {
+		float: none !important
+	}
+}
+
+.center {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.right {
+	margin-left: auto !important;
+	margin-right: 0 !important;
+}
+.left {
+	margin-left: 0 !important;
+	margin-right: auto !important;
+}
+
+.align_center {
+	text-align: center !important;
+}
+
+.align_right {
+	text-align: right !important;
+}
+
+.align_left {
+	text-align: left !important;
+	text-align: justify !important;
+}
+
+.align_left_noj {
+	text-align: left !important;
+}
+
+.sp_align_center {
+	@include media-sp {
+		text-align: center !important;
+	}
+}
+
+.sp_align_right {
+	@include media-sp {
+		text-align: right !important;
+	}
+}
+
+.sp_align_left {
+	@include media-sp {
+		text-align: left !important;
+		text-align: justify !important;
+	}
+}
+
+.dblock {
+	display: block !important;
+}
+.dib {
+	display: inline-block !important;
+}
+.spblock {
+	@include media-sp {
+		display: block;
+		min-width: 0 !important;
+		width: auto !important;
+	}
+}
+.sptable {
+	@include media-sp {
+		display: table !important;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.lh1 {
+	line-height: 1 !important;
+}
+.lh15 {
+	line-height: 1.5 !important;
+}
+.lh18 {
+	line-height: 1.8 !important;
+}
+.lh2 {
+	line-height: 2 !important;
+}
+
+@include media-sp {
+  .splh1 {
+  	line-height: 1 !important;
+  }
+  .splh15 {
+  	line-height: 1.5 !important;
+  }
+  .splh18 {
+  	line-height: 1.8 !important;
+  }
+  .splh2 {
+  	line-height: 2 !important;
+  }
+}
+
+
+.w5 {
+	width: 5% !important;
+}
+
+.w10 {
+	width: 10% !important;
+}
+.w19 {
+	width: 19% !important;
+}
+.w20 {
+	width: 20% !important;
+}
+
+.w30 {
+	width: 30% !important;
+}
+
+.w40 {
+	width: 40% !important;
+}
+
+.w50 {
+	width: 50% !important;
+}
+
+.w60 {
+	width: 60% !important;
+}
+
+.w70 {
+	width: 70% !important;
+}
+.w75 {
+	width: 75% !important;
+}
+
+.w80 {
+	width: 80% !important;
+}
+
+.w90 {
+	width: 90% !important;
+}
+
+.w100 {
+	width: 100% !important;
+}
+
+@include media-sp {
+	.spwauto {
+		width: auto !important;
+	}
+	.spw5 {
+		width: 5% !important;
+	}
+
+	.spw10 {
+		width: 10% !important;
+	}
+
+	.spw20 {
+		width: 20% !important;
+	}
+
+	.spw30 {
+		width: 30% !important;
+	}
+
+	.spw40 {
+		width: 40% !important;
+	}
+
+	.spw50 {
+		width: 50% !important;
+	}
+
+	.spw60 {
+		width: 60% !important;
+	}
+
+	.spw70 {
+		width: 70% !important;
+	}
+
+	.spw80 {
+		width: 80% !important;
+	}
+
+	.spw90 {
+		width: 90% !important;
+	}
+
+	.spw100 {
+		width: 100% !important;
+	}
+}

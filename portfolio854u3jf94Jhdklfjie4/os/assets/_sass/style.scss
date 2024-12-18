@@ -1,0 +1,25 @@
+// Compass(compass-mixins)
+@import "compass/reset";
+@import "compass/css3/border-radius";
+@import 'compass';
+
+
+//変数・mixin
+@import "_variable";
+@import "_common";
+@import "_header";
+@import "_footer";
+@import "_content";
+
+
+.pctb-only {
+	@include media-sp {
+		display: none !important;
+	}
+}
+
+.sp-only {
+	@include media-tbpc {
+		display: none !important;
+	}
+}
