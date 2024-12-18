@@ -1,0 +1,18 @@
+<svg id="women.svg" xmlns="http://www.w3.org/2000/svg" width="115" height="605" viewBox="0 0 115 605">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 160px;
+        font-family: "Moncler Gothic";
+        font-weight: 200;
+        text-transform: uppercase;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <text id="women" class="cls-1" transform="translate(4.442 3.284) rotate(90)">women</text>
+  <text id="women-2" data-name="women" class="cls-2" transform="translate(4.442 -6.718) rotate(90)">women</text>
+</svg>

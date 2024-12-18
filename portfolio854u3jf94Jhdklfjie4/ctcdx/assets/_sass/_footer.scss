@@ -1,0 +1,66 @@
+footer#footer {
+  position: relative;
+  // @include pt(70);
+  // @include pb(70);
+  padding: 72px 0;
+  background-color: #fff;
+  @include media-sp {
+    padding: 72px 0 20px;
+  }
+  .c-footer-center {
+    img {
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      &:nth-child(1) {
+        @include media-sp {
+          width: 160px;
+          height: auto;
+        }
+      }
+      &:nth-child(2) {
+        @include mt(30);
+        @include media-sp {
+          width: 260px;
+          height: auto;
+          margin-top: 29px;
+        }
+      }
+    }
+  }
+  .c-footer-right {
+    position: absolute;
+    right: 20px;
+    bottom: 17px;
+    text-align: right;
+    @include media-sp {
+      position: static;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .corporate_site {
+      letter-spacing: 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: #005ccf;
+      border: 1px solid #005ccf;
+      padding: 4px 8px;
+      transition: color .4s cubic-bezier(.25, 1, .5, 1), background-color .4s cubic-bezier(.25, 1, .5, 1);
+      &:hover {
+        background: #005ccf;
+        color: #fff;
+      }
+    }
+    .copyright {
+      line-height: 1;
+      letter-spacing: 0;
+      color: #000;
+      font-size: 12px;
+      @include mt(12);
+      @include media-sp {
+        font-size: 11px;
+        margin-top: 22px;
+      }
+    }
+  }
+}

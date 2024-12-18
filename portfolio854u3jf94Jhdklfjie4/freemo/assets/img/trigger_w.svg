@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="trigger_w.svg" class="cls-1" d="M849,57H839V47h10V57Zm14,0H853V47h10V57Zm14,0H867V47h10V57ZM849,71H839V61h10V71Zm14,0H853V61h10V71Zm14,0H867V61h10V71ZM849,85H839V75h10V85Zm14,0H853V75h10V85Zm14,0H867V75h10V85Z" transform="translate(-839 -47)"/>
+</svg>

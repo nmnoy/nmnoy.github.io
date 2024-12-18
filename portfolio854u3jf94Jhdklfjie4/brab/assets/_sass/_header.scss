@@ -1,0 +1,209 @@
+header {
+
+  img {
+    vertical-align: bottom;
+  }
+  width: 100%;
+  // min-width: 1280px;
+
+  @include media-sp {
+    min-width: 0;
+  }
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  .in {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include padding(24,28,0,28);
+    @include sppadding(30,30,30,30);
+    .overlay {
+      pointer-events: none;
+      background: rgba(0,0,0,0.7);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s;
+      &.is-active {
+        pointer-events: auto;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.4s;
+      }
+    }
+    .gnav_wrap {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      // align-items: center;
+      .sp_nav {
+        z-index: 99;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        // align-items: center;
+        // margin-right: 10px;
+        &.is-active {
+          // @include right(-253);
+          // @include spright(-253);
+          right: -80%;
+          @include media-sp {
+            right: -60%;
+          }
+        }
+        background-color: #1e3358;
+        margin-right: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        flex-direction: column;
+        overflow-y: scroll;
+        top: 0;
+        // left: 100%;
+        right: -100%;
+        transition: right .4s;
+        .gnav_in {
+          @include pt(130);
+          @include pl(30);
+          @include sppt(130);
+          @include sppl(30);
+        }
+        ul.gnav {
+          width: 46%;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0 30px;
+          @include spgap(30,0);
+          li {
+            text-align: center;
+            a {
+              color: #fff;
+              letter-spacing: 0.1em;
+              font-weight: 700;
+              span {
+                background: linear-gradient(#fff, #fff) 0 100%/0 1px no-repeat;
+              }
+            }
+          }
+        }
+      }
+      ul.gnav {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        gap: 0 30px;
+        // margin-right: 40px;
+        li {
+          margin-top: 1em;
+          &:first-child {
+            margin-top: 0;
+          }
+          a {
+            font-weight: 700;
+            font-style: italic;
+            display: block;
+            font-weight: 500;
+            @include spfz(24);
+            @include spfz(28);
+            span {
+              @include fade_under;
+            }
+          }
+        }
+      }
+    }
+    .ham {
+      position: fixed;
+      @include top(30);
+      @include right(30);
+      @include sptop(30);
+      @include spright(30);
+      z-index: 100;
+      cursor: pointer;
+      @include wide(56);
+      @include height(56);
+      @include spwide(90);
+      @include spheight(90);
+      background: #1e3358;
+      span.txt {
+        color: #fff;
+        letter-spacing: 0.15em;
+        font-family: $roboto_c;
+        @include fz(12);
+        @include spfz(22);
+        position: absolute;
+        @include bottom(2);
+        @include left(10);
+        @include spbottom(2);
+        @include spleft(12);
+        // left: 0;
+      }
+      span.bar {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+      }
+      span.bar::after,
+      span.bar::before {
+        position: absolute;
+        @include top(0);
+        @include sptop(0);
+        content: '';
+        width: 70%;
+        @include left(8);
+        @include spleft(12);
+        @include height(2);
+        @include spheight(3);
+        display: block;
+        background: #fff;
+        transition: transform .3s,background-color .3s;
+        // @include radius(10,10,10,10);
+        // @include spradius(10,10,10,10);
+      }
+
+      span.bar::before {
+        transform: translateY(0.9em);
+        // box-shadow: 0 0.595em 0 #000;
+        @include media-sp {
+          transform: translateY(1.5em);
+        }
+      }
+
+      span.bar::after {
+        transform: translateY(1.5em);
+        @include media-sp {
+          transform: translateY(2.5em);
+        }
+      }
+      &.is-active span::before {
+        transform: translateY(1.2em) rotate(45deg);
+        box-shadow: none;
+        background: #fff;
+        transition: transform .3s,background-color .3s;
+        @include media-sp {
+          transform: translateY(2em) rotate(45deg);
+        }
+      }
+      &.is-active span::after {
+        transform: translateY(1.2em) rotate(-45deg);
+        background: #fff;
+        transition: transform .3s,background-color .3s;
+        @include media-sp {
+          transform: translateY(2em) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+}

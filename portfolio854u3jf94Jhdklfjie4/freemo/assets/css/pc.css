@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+  .content_aito .txt_box img {
+    max-height: 25vh
+  }
+  .content_aito .txt_box .txt_ttl {
+      font-size: 18px;
+  }
+  .content_aito .txt_box .txt {
+      font-size: 15px;
+  }
+}

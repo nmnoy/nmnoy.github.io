@@ -1,0 +1,39 @@
+footer {
+  @include pt(60);
+  @include pb(18);
+  @include sppt(116);
+  @include sppb(20);
+  position: relative;
+  background: #000;
+  .sns_list {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    @include gap(0,30);
+    @include spgap(0,46);
+    li {
+      @include wide(36);
+      @include spwide(60);
+      a {
+        @include fade;
+      }
+    }
+  }
+  .logo {
+    margin: 0 auto;
+    @include wide(155);
+    @include spwide(216);
+    @include mt(100);
+    @include spmt(100);
+  }
+  .copy {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    @include fz(12);
+    @include spfz(24);
+    @include mt(20);
+    @include spmt(30);
+  }
+}

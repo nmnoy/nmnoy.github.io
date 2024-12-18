@@ -1,0 +1,142 @@
+html {
+}
+body {
+  // min-width: 1280px;
+  @include media-sp {
+    min-width: 0;
+  }
+	position: relative;
+  z-index: 1;
+  color: #000;
+  line-height: 1.714;
+	font-family: $zenkaku;
+	font-weight: 400;
+  font-size: 14px;
+  @include spfz(14);
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+  // overflow-x: hidden;
+  text-align: left;
+	@include media-sp {
+		width: 100%;
+		min-width: inherit;
+	}
+  &.hidden {
+    /* when modal active */
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    /* Other browsers */
+    overscroll-behavior: none;
+  }
+}
+input,
+select,button,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+textarea {
+  resize: vertical;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance:textfield;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: absolute;
+  opacity:0;
+  height: 1px;
+  width: 1px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+input[type=checkbox] {
+  display: none;
+}
+sup {
+  font-size: 0.7em;
+	vertical-align: top;
+}
+a,button {
+  text-decoration: none;
+  color: #000;
+}
+img {
+	width: 100%;
+  vertical-align: bottom;
+}
+
+a.fade,
+div.fade,
+input.fade {
+	transition: opacity 0.4s;
+	opacity: 1;
+  backface-visibility: hidden;
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+@mixin fade {
+  transition: opacity 0.4s;
+	opacity: 1;
+  backface-visibility: hidden;
+	&:hover {
+    transition: opacity 0.4s;
+		opacity: 0.7;
+	}
+}
+
+@mixin fade_under {
+  padding-bottom: .25em;
+  background: linear-gradient(#000, #000) 0 100%/0 1px no-repeat;
+  transition: background .3s;
+  text-decoration: none;
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+#wrapper {
+  position: relative;
+}
+
+@media print{
+  body.print {
+  }
+}
+
+.fadeObj {
+  opacity: 0;
+  transition: 0.6s;
+  // transform: translateY(30px);
+  &.is-active {
+    opacity: 1;
+    transition: 0.6s;
+    // transform: translateY(0);
+  }
+}

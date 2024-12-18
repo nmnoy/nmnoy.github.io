@@ -1,0 +1,25 @@
+footer {
+  @include pt(20);
+  @include pb(35);
+  @include sppt(25);
+  @include sppb(35);
+  position: relative;
+  background: #1e3358;
+  border-top: 4px solid #b29e61;
+  .mark {
+    margin: 0 auto;
+    @include wide(48);
+    @include spwide(86);
+  }
+  .copy {
+    letter-spacing: 0.2em;
+    font-family: $roboto_c;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    @include fz(12);
+    @include spfz(22);
+    @include mt(15);
+    @include spmt(30);
+  }
+}

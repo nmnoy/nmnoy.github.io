@@ -1,0 +1,28 @@
+footer {
+  background: #E6E6E7;
+  color: #000;
+  @include padding(50,20,30,20);
+  @include sppadding(50,20,30,20);
+  a {
+    color: #fff;
+  }
+  .in {
+    text-align: center;
+    margin: 0 auto;
+    // max-width: 1080px;
+    @include media-sp {
+      max-width: none;
+    }
+  }
+  .footer_logo {
+    margin: 0 auto;
+    @include wide(178);
+    @include spwide(178);
+  }
+  small {
+    display: block;
+    @include fz(11);
+    @include spfz(13);
+    margin-top: 1em;
+  }
+}

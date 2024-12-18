@@ -1,0 +1,33 @@
+<svg id="グループ_1617" data-name="グループ 1617" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="90" viewBox="0 0 90 90">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_1286" data-name="長方形 1286" width="90" height="90" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="長方形_1283" data-name="長方形 1283" width="45" height="90" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="長方形_1284" data-name="長方形 1284" width="90" height="45" transform="translate(0 45)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_1566" data-name="グループ 1566" clip-path="url(#clip-path)" style="mix-blend-mode: luminosity;isolation: isolate">
+    <g id="グループ_1565" data-name="グループ 1565">
+      <g id="グループ_1564" data-name="グループ 1564" clip-path="url(#clip-path)">
+        <g id="グループ_1560" data-name="グループ 1560" style="mix-blend-mode: multiply;isolation: isolate">
+          <g id="グループ_1559" data-name="グループ 1559">
+            <g id="グループ_1558" data-name="グループ 1558" clip-path="url(#clip-path-3)">
+              <path id="パス_795" data-name="パス 795" d="M45,0h0V90A45,45,0,0,1,45,0" fill="#ff8686"/>
+            </g>
+          </g>
+        </g>
+        <g id="グループ_1563" data-name="グループ 1563" style="mix-blend-mode: multiply;isolation: isolate">
+          <g id="グループ_1562" data-name="グループ 1562">
+            <g id="グループ_1561" data-name="グループ 1561" clip-path="url(#clip-path-4)">
+              <path id="パス_796" data-name="パス 796" d="M0,45H90A45,45,0,0,1,0,45" fill="#ff9b3c"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

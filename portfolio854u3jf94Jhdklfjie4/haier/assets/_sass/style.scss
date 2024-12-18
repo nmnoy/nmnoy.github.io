@@ -1,0 +1,85 @@
+@import "html5reset-1.6.1.scss";
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+//共通要素
+ul,li {
+  list-style: none;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+//vwのスクロールバー分マイナス
+:root {
+  --vw: 1vw;
+}
+
+//GoogleFonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+$inter: 'Inter', sans-serif;
+$font_pc: 'Inter',"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+$font_sp: 'Inter','Zen Kaku Gothic New', sans-serif;
+
+// $roboto: 'Roboto', 'Noto Sans JP', sans-serif;
+// $serif: 'Noto Serif JP', serif;
+// $zen: 'Zen Kaku Gothic New', sans-serif;
+// $mplus: 'M PLUS Rounded 1c', sans-serif;
+
+//変数
+@import "variable";
+@import "extend";
+
+//共通レイアウト要素
+@import "page";
+@import "footer";
+
+
+
+
+.tbpc-only {
+	@include media-sp {
+		display: none !important;
+	}
+}
+
+.sp-only {
+	@include media-tbpc {
+		display: none !important;
+	}
+}

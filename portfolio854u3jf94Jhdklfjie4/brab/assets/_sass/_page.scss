@@ -1,0 +1,401 @@
+html {
+  background: #1e3358;
+}
+.inner {
+  max-width: 1120px;
+  // width: 100%;
+  @include wide(1120);
+  margin: 0 auto;
+  @include padding(0,20,0,20);
+  @include sppadding(0,30,0,30);
+  @include media-sp {
+    width: 100%;
+  }
+}
+.kv {
+  background: #1e3358;
+  @include media-sp {
+  }
+  @include padding(56,0,45,0);
+  @include sppadding(56,0,45,0);
+  .in {
+    .kv_ttl {
+      margin: 0 auto;
+      @include wide(422);
+      @include spwide(422);
+    }
+  }
+}
+.wrap {
+  color: #fff;
+  background: url(../img/bg.png) 0 0 / 100% auto repeat-y;
+  @include padding(80,0,160,0);
+  @include sppadding(50,0,80,0);
+}
+.about {
+  text-align: center;
+  .ttl {
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-family: $roboto_c;
+    @include fz(60);
+    @include spfz(65);
+  }
+  .cross {
+    @include mt(15);
+    @include spmt(15);
+    .cross_t01 {
+      position: relative;
+      line-height: 2;
+      letter-spacing: 0.2em;
+      @include fz(18);
+      @include spfz(19);
+      &:last-child {
+        @include mt(60);
+        @include spmt(60);
+        &:before {
+          content: '';
+          display: inline-block;
+          @include wide(32);
+          @include height(32);
+          @include spwide(32);
+          @include spheight(32);
+          background: url(../img/cross.svg) 0 0 / contain no-repeat;
+          position: absolute;
+          @include top(-45);
+          @include sptop(-45);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+  .lead {
+    @include mt(40);
+    @include spmt(40);
+    .lead_t01 {
+      line-height: 2;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      @include fz(24);
+      @include spfz(26);
+      span {
+        background:linear-gradient(transparent 70%, #b29e61 70%);
+      }
+    }
+    .lead_t02 {
+      font-weight: 700;
+      @include fz(30);
+      @include spfz(32);
+      letter-spacing: 0.2em;
+      span {
+        font-family: $roboto_c;
+        @include fz(36);
+        @include spfz(39);
+        span {
+          color: #b29e61;
+        }
+        i {
+          font-style: normal;
+          font-family: $noto;
+          @include fz(30);
+          @include spfz(32);
+        }
+      }
+    }
+  }
+  .box {
+    border: 2px solid #b29e61;
+    background: #fff;
+    display: table;
+    @include wide(610);
+    @include spwide(650);
+    margin: 0 auto;
+    margin-top: 1em;
+    color: #001324;
+    padding: 0.8em 1em;
+    .box_t01 {
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      @include fz(20);
+      @include spfz(21);
+    }
+    .box_t02 {
+      letter-spacing: 0.1em;
+      text-align: left;
+      @include fz(16);
+      @include spfz(17);
+      margin-top: 0.6em;
+    }
+  }
+  .date_ttl {
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    font-family: $noto_s;
+    @include fz(27);
+    @include spfz(27);
+    @include mt(40);
+    @include spmt(30);
+  }
+  .date_box {
+    margin: 0 auto;
+    @include mt(38);
+    @include spmt(40);
+    position: relative;
+    display: table;
+    color: #001324;
+    @include wide(1074);
+    @include spwide(700);
+    @include padding(28,140,28,140);
+    @include sppadding(30,33,30,43);
+    &:after {
+      content: '';
+      display: block;
+      background: #fff;
+      transform: skewX(18deg);
+      @include media-sp {
+        transform: skewX(10deg);
+      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    table {
+      font-weight: 700;
+      font-family: $roboto_c;
+      position: relative;
+      z-index: 1;
+      tr {
+
+      }
+      th,td {
+        line-height: 1.5;
+        text-align: left;
+        letter-spacing: 0.2em;
+      }
+      th {
+        @include fz(24);
+        @include spfz(22);
+      }
+      td {
+        @include fz(24);
+        @include spfz(22);
+        .s1 {
+          @include fz(30);
+          @include spfz(27);
+        }
+        .s2 {
+          @include fz(20);
+          @include spfz(18);
+        }
+      }
+    }
+  }
+}
+
+.message {
+  @include pt(160);
+  @include pb(120);
+  @include sppt(80);
+  @include sppb(90);
+  .message_ttl {
+    text-align: center;
+    font-family: $roboto_c;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    @include fz(60);
+    @include spfz(70);
+    span {
+      color: #b29e61;
+    }
+  }
+  .message_txt {
+    margin: 0 auto;
+    letter-spacing: 0.2em;
+    line-height: 2.2;
+    @include mt(45);
+    @include spmt(50);
+    display: table;
+  }
+  .message_t01 {
+    @include fz(16);
+    @include spfz(18);
+    margin-top: 1.6em;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .message_t02 {
+    font-family: $roboto_c;
+    font-weight: 700;
+    line-height: 1.4;
+    @include fz(30);
+    @include spfz(35);
+    @include mt(30);
+    @include spmt(40);
+    span {
+      color: #b29e61;
+    }
+  }
+  .message_t03 {
+    font-family: $noto_s;
+    font-weight: 400;
+    line-height: 1.4;
+    @include fz(24);
+    @include spfz(28);
+    @include mt(20);
+    @include spmt(20);
+  }
+}
+
+.block {
+  @include pt(120);
+  @include pb(40);
+  &.team {
+    .inner {
+      @include sppadding(0,70,0,70);
+    }
+  }
+  &:first-of-type {
+    padding-top: 0;
+  }
+  .block_ttl_wrap {
+    text-align: center;
+    .block_ttl {
+      line-height: 1;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      @include fz(48);
+      @include spfz(48);
+    }
+    .block_sub {
+      line-height: 1;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: #b29e61;
+      font-family: $roboto_c;
+      @include fz(20);
+      @include spfz(20);
+      @include mt(25);
+      @include spmt(25);
+    }
+  }
+  .block_box {
+    background: rgba(255,255,255,0.9);
+    color: #0f1a29;
+    @include padding(30,30,30,30);
+    @include sppadding(30,35,30,35);
+    @include mt(30);
+    @include spmt(30);
+  }
+  .team_name {
+    text-align: center;
+    font-weight: 700;
+    font-family: $noto_s;
+    @include fz(44);
+    @include spfz(54);
+  }
+  .team_img {
+    text-align: center;
+    @include height(276);
+    @include spheight(343);
+    @include mt(15);
+    @include spmt(15);
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .team_txt {
+    font-weight: 700;
+    line-height: 2.2;
+    @include fz(16);
+    @include spfz(20);
+    @include mt(25);
+    @include spmt(25);
+  }
+  .list {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include gap(50,0);
+    @include mt(35);
+    @include spmt(35);
+    li {
+      width: 47.5%;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      @include media-sp {
+        width: 100%;
+      }
+      .block_box {
+        margin-top: 0;
+      }
+    }
+  }
+  .yt {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .map {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .velcares {
+    @include padding(45,110,65,110);
+    @include sppadding(45,45,65,45);
+    .v_ttl_wrap {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include gap(0,40);
+      @include spgap(0,40);
+      .mark {
+        @include wide(74);
+        @include spwide(92);
+      }
+      .v_ttl {
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        font-family: $roboto_c;
+        @include fz(24);
+        @include spfz(32);
+      }
+    }
+    .v_t01 {
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      line-height: 2;
+      @include fz(20);
+      @include spfz(24);
+      @include mt(25);
+      @include spmt(50);
+    }
+    .v_t02 {
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      color: #b29e61;
+      text-align: center;
+      @include fz(30);
+      @include spfz(30);
+      @include mt(50);
+      @include spmt(45);
+    }
+  }
+}

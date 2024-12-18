@@ -1,0 +1,47 @@
+#header {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  #h_logo {
+    padding: 15px 0;
+    @include pl(34);
+    @include sppt(15);
+    @include sppb(15);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    span {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+      @include mr(24);
+      &.l1 {
+        width: 112px;
+        @include spwide(112);
+      }
+      &.l2 {
+        width: 215px;
+        @include spwide(215);
+      }
+    }
+  }
+  #h_contact {
+    display: table;
+    text-align: center;
+    font-weight: 500;
+    width: 200px;
+    @include spwide(200);
+    font-size: 16px;
+    @include spfz(16);
+    line-height: 1;
+    background: #00abc6;
+    color: #fff;
+    padding-bottom: 0.1em;
+    > * {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}

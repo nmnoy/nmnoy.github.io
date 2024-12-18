@@ -1,0 +1,38 @@
+footer {
+  position: relative;
+  background: #e6e6e7;
+  z-index: 11;
+  font-size: 15px;
+  @include spfz(22);
+  .in {
+    padding: 80px 0 70px;
+    @include sppadding(80,0,80,0);
+  }
+  .logo {
+    width: 200px;
+    margin: 0 auto;
+    @include spwide(240);
+  }
+  .footer_txt {
+    text-align: center;
+    margin-top: 50px;
+    @include spmt(50);
+  }
+  .footer_list {
+    display: table;
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+  a {
+    text-decoration: underline;
+  }
+  .copy_wrap {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    padding: 20px 0;
+    @include spfz(18);
+    @include sppadding(20,20,20,20);
+  }
+}

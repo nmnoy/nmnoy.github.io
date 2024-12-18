@@ -1,0 +1,20 @@
+footer {
+  background: #fff;
+  padding: 8% 0 8%;
+  .in {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    gap: 0 5%;
+  }
+  .logo {
+    width: 154px;
+    @include spwide(200);
+  }
+  small {
+    line-height: 1.4;
+    font-size: 11px;
+    @include spfz(16);
+  }
+}

@@ -1,0 +1,190 @@
+
+#footer {
+  background: #b100ff;
+  text-align: center;
+
+  .logo_area {
+    background: #b100ff;
+    padding: 5.5vh 16.38vh 0 5.5vh;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    @include maxs($breakpoint-tab) {
+      padding: 3.77vh 14.40vh 0 3.77vh;
+      padding: calc(var(--vh, 1vh) * 3.70) calc(var(--vh, 1vh) * 14.40) 0 calc(var(--vh, 1vh) * 3.70);
+    }
+    .logo {
+      img {
+        height: 4.16vh;
+        @include maxs($breakpoint-tab) {
+          height: calc(var(--vh, 1vh) * 4.724);
+        }
+      }
+    }
+  }
+  .banner_sp {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 8vh auto 0;
+    background: #00c7ff;
+    // @include wide(400);
+    width: 40vh;
+    max-width: 400px;
+    // @include spwide(500);
+    @include maxs($breakpoint-tab) {
+      margin: 0 auto 0;
+      width: auto;
+      max-width: 60vw;
+    }
+    transition: opacity 0.4s;
+    &:hover {
+      transition: opacity 0.4s;
+      opacity: 0.7;
+    }
+    .img {
+      display: block;
+      line-height: 1;
+      // @include pt(70);
+      // @include pb(70);
+      // @include pl(40);
+      // @include pr(40);
+      padding: 6vh 4vh;
+      // @include sppt(56);
+      // @include sppb(56);
+      // @include sppl(105);
+      // @include sppr(105);
+      img {
+        max-width: 100%;
+      }
+    }
+    .txt {
+      text-align: center;
+      line-height: 1;
+      display: block;
+      color: #fff;
+      background: #000;
+      font-size: 1.8vh;
+      padding: 3vh;
+      @include media-sp {
+        padding: 5vw;
+      }
+      img {
+        height: 2.75vh;
+        @include media-sp {
+          max-width: 20vw;
+        }
+      }
+      // @include fz(22);
+      // @include spfz(28);
+      // @include pt(31);
+      // @include pb(28);
+      // @include sppt(38);
+      // @include sppb(35);
+    }
+  }
+  .box {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 87.22vh;
+    padding: 5.5vh 5.5vh 0 5.5vh;
+    // @include pt(120);
+    // @include pb(20);
+    // @include pl(30);
+    // @include pr(30);
+    // @include sppt(160);
+    // @include sppb(24);
+    @include maxs($breakpoint-tab) {
+      height: 88.22vh;
+      padding: 12.5vh 5.5vh 0 5.5vh;
+      // height: 39.37vh;
+      // height: 39.37%;
+      // height: calc(var(--vh, 1vh) * 39.37);
+      position: static;
+    }
+    @include media-sp {
+      flex-direction: column;
+      align-items: center;
+    }
+    .box_wrap {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: baseline;
+      @include maxs($breakpoint-tab) {
+        justify-content: center;
+      }
+      .l_box {
+        @include pb(14);
+        @include sppb(0);
+        .sns {
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          @include media-sp {
+            justify-content: center;
+          }
+          li {
+            @include ml(20);
+            @include spml(50);
+            &:first-child {
+              margin-left: 0;
+            }
+            a {
+              transition: 0.4s;
+              opacity: 1;
+              &:hover {
+                transition: 0.4s;
+                opacity: 0.6;
+              }
+            }
+          }
+          img {
+            // @include wide(40);
+            // @include spwide(60);
+            height: 4.16vh;
+            @include maxs($breakpoint-tab) {
+              height: calc(var(--vh, 1vh) * 4.724);
+            }
+          }
+        }
+      }
+      .r_box {
+        text-align: right;
+        // @include spmt(100);
+        @include media-sp {
+          text-align: center;
+          margin-top: 8.66vh;
+        }
+        .logo {
+          img {
+            // @include wide(173);
+            height: 5vh;
+            @include maxs($breakpoint-tab) {
+              height: calc(var(--vh, 1vh) * 5.724);
+            }
+          }
+        }
+        .copyright {
+          font-weight: 400;
+          color: #fff;
+          // @include fz(12);
+          // @include spfz(24);
+          font-size: 1.5vh;
+          margin-top: 1.4em;
+          @include media-sp {
+            margin-top: 2em;
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+  }
+
+}

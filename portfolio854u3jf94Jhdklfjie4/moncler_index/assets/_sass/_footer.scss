@@ -1,0 +1,32 @@
+footer {
+  background: #f6f6f6;
+  text-align: center;
+  color: #626262;
+  @include fz(16);
+  @include spfz(16);
+  @include padding(80,0,15,0);
+  @include sppadding(75,0,15,0);
+  ul.footer_nav {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    li {
+      line-height: 1;
+      border-right: 1px solid #626262;
+      padding: 0 1em;
+      &:first-child{
+        border-left: 1px solid #626262;
+      }
+
+    }
+  }
+  a {
+    color: #626262;
+  }
+  .copy {
+    @include mt(40);
+    @include spmt(40);
+  }
+}

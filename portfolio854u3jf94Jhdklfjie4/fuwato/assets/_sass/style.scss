@@ -1,0 +1,49 @@
+@import "html5reset-1.6.1.scss";
+
+//共通要素
+ul,li {
+  list-style: none;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+//vwのスクロールバー分マイナス
+:root {
+  --vw: 1vw;
+}
+
+//GoogleFonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+$zenkaku: 'Zen Kaku Gothic New', "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+$roboto: 'Roboto','Zen Kaku Gothic New', "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+//Zen Kaku Gothic New
+//light 300
+//regular 400
+//midium 500
+//bold 700
+
+//変数
+@import "variable";
+
+.tbpc-only {
+	@include media-sp {
+		display: none !important;
+	}
+}
+
+.sp-only {
+	@include media-tbpc {
+		display: none !important;
+	}
+}
+
+//レイアウト要素
+@import "common";
+@import "header";
+@import "footer";
+@import "page";
+@import "class";

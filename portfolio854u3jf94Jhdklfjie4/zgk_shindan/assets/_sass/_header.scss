@@ -1,0 +1,27 @@
+header {
+}
+#sp_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  @include spheight(89);
+  background: url(../img/sp_header.png) 0 0 / cover no-repeat;
+  .in {
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sppl(35);
+    @include sppr(50);
+    .logo {
+      @include spwide(190);
+    }
+    .logo2 {
+      @include spwide(349);
+    }
+  }
+}

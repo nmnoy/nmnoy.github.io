@@ -1,0 +1,22 @@
+header {
+  @include padding(20,20,0,20);
+  @include sppadding(25,25,0,25);
+  @include media-sp {
+  }
+  .in {
+    // max-width: 1280px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header_logo {
+    line-height: 1;
+    @include wide(114);
+    @include spwide(180);
+    position: relative;
+    z-index: 100;
+  }
+}

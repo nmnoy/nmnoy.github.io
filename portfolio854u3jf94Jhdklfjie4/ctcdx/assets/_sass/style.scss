@@ -1,0 +1,20 @@
+@import 'compass';
+//変数・mixin
+@import "_variable";
+@import "_mixin";
+@import "_header";
+@import "_footer";
+@import "_home";
+
+
+.pctb-only {
+	@include media-sp {
+		display: none !important;
+	}
+}
+
+.sp-only {
+	@include media-tbpc {
+		display: none !important;
+	}
+}

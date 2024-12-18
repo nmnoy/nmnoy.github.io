@@ -1,0 +1,515 @@
+html {
+  height: 100dvh;
+}
+body,main,.kv {
+  height: 100%;
+  background: #fffdf3;
+}
+
+.hamburger {
+  position: fixed;
+  top: 2.14vw;
+  right: 2.14vw;
+  width: 1.857vw;
+  height: 1.642vw;
+  @include sptop(50);
+  @include spright(50);
+  @include spwide(46);
+  @include spheight(43);
+  z-index: 11;
+  transition: .5s;/* 追記 */
+  &.active{/* 追記 */
+    transform: rotateY(360deg);/* 追記 */
+    span {
+      &:first-of-type{/* ハンバーガーメニューの1番目の線 */
+        top: 50%;
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+        opacity: 0;/* 透明にする */
+      }
+      &:last-of-type{/* ハンバーガーメニューの3番目の線 */
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    @include spheight(3);
+    background-color: #fff;
+    transition: .5s;/* 追記 */
+    &:first-of-type{/* ハンバーガーメニューの1番目の線 */
+      top: 0;
+    }
+    &:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+      top: 50%;
+    }
+    &:last-of-type{/* ハンバーガーメニューの3番目の線 */
+      top: 100%;
+    }
+  }
+}
+
+
+
+.profile {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  @include media-sp {
+    overflow: auto;
+  }
+  &:before,&:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+  }
+  &:before {
+    background: #282828;
+    left: 0;
+  }
+  &:after {
+    background: #3c3c3c;
+    left: 50%;
+  }
+  &.active {
+    opacity: 1;
+    transition: 0.4s;
+    visibility: visible;
+  }
+  &_wrap {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    height: 100%;
+    // overflow: auto;
+    @include media-sp {
+      height: auto;
+      flex-direction: column;
+      width: 100%;
+      overflow: auto;
+      &:before {
+        content: '';
+        background: #3c3c3c;
+        width: 12%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+    }
+  }
+  &_l {
+    position: relative;
+    width: 50%;
+    background: #282828;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.active {
+      @include media-tbpc {
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+    }
+    @include sppadding(40,100,80,100);
+    @include media-sp {
+      // width: 12%;
+      width: 88%;
+      margin-left: 12%;
+      background: #282828;
+    }
+    .photo {
+      width: 72.85%;
+      position: relative;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%,-50%);
+      @include media-sp {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0,0);
+      }
+      .name {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: #fff;
+        font-style: italic;
+        letter-spacing: 0.2em;
+        font-size: 1.42vw;
+        @include spfz(30);
+      }
+    }
+  }
+  &_r {
+    position: relative;
+    width: 50%;
+    background: #3c3c3c;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    &.active {
+      @include media-tbpc {
+        align-items: flex-start;
+        padding-top: 20px;
+      }
+    }
+    @include sppadding(0,100,100,100);
+    @include media-sp {
+      width: 88%;
+      overflow-y: auto;
+      margin-left: 12%;
+      background: #282828;
+    }
+    .txt {
+      font-size: 1vw;
+      font-style: italic;
+      letter-spacing: 0.2em;
+      @include spfz(22);
+      color: #fff;
+      position: relative;
+      padding: 3vw 4vw;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // margin-right: -50%s;
+      // transform: translate(-50%,-50%);
+      @include media-sp {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0,0);
+        padding: 0;
+      }
+      p {
+        margin-top: 1.2em;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+      table {
+        margin-top: 0;
+        th {
+          width: 5.2em;
+          &:after {
+            content: '：';
+          }
+        }
+      }
+    }
+  }
+}
+.kv {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  background: #fffdf3;
+  height: 100vh;
+  @include media-sp {
+    height: auto;
+  }
+  .txtArea {
+    width: 50%;
+    background: #fffdf3;
+    position: relative;
+    height: 100vh;
+    @include media-sp {
+      width: 12%;
+      height: auto;
+    }
+    .logo {
+      width: 66.85%;
+      @include spwide(328);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include sptop(50);
+      @include spleft(44.5);
+      transform: translate(-50%,-80%);
+      @include media-sp {
+        position: fixed;
+        transform: translate(0,0);
+        // height: 15.643dvw;
+        z-index: 100;
+        &.active {
+          background: url(../img/ttl_sp_profile.png) 0 0 / contain no-repeat;
+          img {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+    .sns {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      gap: 0 2vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include sptop(350);
+      @include spleft(26);
+      transform: translate(-50%,420%);
+      @include media-sp {
+        flex-direction: column;
+        transform: translate(0,0);
+        position: fixed;
+        top: 30vh;
+        z-index: 11;
+        &.active {
+          svg {
+            fill: #fff;
+          }
+        }
+      }
+      @include spgap(60,0);
+      li {//insta 46_46 tiktok44_44 twi38_46
+        height: 1.64vw;
+        @include spheight(48);
+        position: relative;
+        &.ig {
+          @include wide(23);
+          @include height(23);
+          @include spwide(44);
+          @include spheight(44);
+          // aspect-ratio: 46 / 46;
+        }
+        &.tt {
+          @include wide(22);
+          @include height(22);
+          @include spwide(44);
+          @include spheight(44);
+          // aspect-ratio: 44 / 44;
+        }
+        &.tw {
+          @include wide(24);
+          @include height(24);
+          @include spwide(48);
+          @include spheight(48);
+          // aspect-ratio: 38 / 46;
+          svg {
+            @include spleft(-4);
+          }
+        }
+        a {
+          display: block;
+          height: 100%;
+          @include fade;
+          img {
+            width: 100%;
+            // height: 100%;
+          }
+          svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .copy {
+      position: absolute;
+      top: 50%;
+      @include spbottom(40);
+      @include spleft(30);
+      z-index: 12;
+      transform: translateY(-50%);
+      left: 4px;
+      letter-spacing: 0.2em;
+      font-size: 1vw;
+      @include spfz(24);
+      writing-mode: vertical-lr;
+      font-style: italic;
+      @include media-sp {
+        top: auto;
+        position: fixed;
+        transform: translateY(0);
+      }
+      &.active {
+        color: #fff;
+      }
+      span {
+        font-style: normal;
+        text-orientation: sideways;
+      }
+    }
+  }
+  .visualArea {
+    width: 50%;
+    height: 100vh;
+    @include media-sp {
+      width: 88%;
+      height: auto;
+    }
+  }
+  .swiper-wrapper {
+    @include media-sp {
+      display: block;
+      height: auto;
+    }
+  }
+  .swiper {
+    height: 100vh;
+    @include media-sp {
+      height: auto;
+    }
+  }
+  .swiper-slide {
+    overflow: hidden;
+    img {
+      height: 100vh;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .swiper-img {
+    @include media-sp {
+      transform: translate3d(0px, 0, 0px) !important;
+    }
+  }
+
+  .slider {
+    opacity: 0;
+    transition: 0.4s opacity;
+    &.slick-initialized {
+      opacity: 1;
+      transition: 0.4s opacity;
+    }
+    @include media-sp {
+      opacity: 1;
+    }
+  }
+  // .slick-dotted.slick-slider {
+  //   margin: 0;
+  //   height: 100vh;
+  //   img {
+  //     object-fit: cover;
+  //   }
+  // }
+  // .slick-vertical .slick-slide {
+  //   border: 0;
+  //   margin: 0;
+  //   height: 100vh;
+  //   position: relative;
+  //   img {
+  //     object-fit: cover;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 50%;
+  //     height: 100%;
+  //     width: 100%;
+  //     transform: translateX(-50%);
+  //   }
+  // }
+  // .slide {
+  // }
+  // .slick-dots {
+  //   display: -webkit-flex;
+  //   display: -ms-flex;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   align-items: flex-end;
+  //   justify-content: center;
+  //   gap: 0.45vw 0.6%;
+  //   position: absolute;
+  //   bottom: 1vw;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 88.71%;
+  //   li {
+  //     margin: 0;
+  //     height: 2px;
+  //     width: 14.8%;
+  //     padding: 0;
+  //     &.slick-active {
+  //       height: 4px;
+  //       button {
+  //         opacity: 1;
+  //       }
+  //     }
+  //     button {
+  //       opacity: 0.6;
+  //       padding: 0;
+  //       width: 100%;
+  //       height: 100%;
+  //       border-radius: 0;
+  //       background: #fff;
+  //       &:before,&:after {
+  //         content: none;
+  //       }
+  //     }
+  //   }
+  // }
+  .swiper-pagination {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.45vw 0.6%;
+    position: absolute;
+    top: auto !important;;
+    right: auto !important;;
+    bottom: 1vw !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 88.71%;
+    .swiper-pagination-bullet {
+      position: relative;
+      margin: 0 !important;
+      height: 4px;
+      width: 14.8%;
+      padding: 0;
+      opacity: 0.6;
+      border-radius: 0;
+      transform: none;
+      background-color: transparent;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        display: block;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      &:before {
+        height: 4px;
+      }
+    }
+  }
+
+}

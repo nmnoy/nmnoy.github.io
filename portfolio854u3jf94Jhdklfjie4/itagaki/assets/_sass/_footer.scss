@@ -1,0 +1,142 @@
+#page-top {
+  position: fixed;
+  // @include bottom(90);
+  @include right(24);
+  @include spright(10);
+  line-height: 1;
+  z-index: 99;
+  // @include wide(90);
+  // @include spwide(90);
+  // @include height(90);
+  // @include spheight(90);
+  transition: 0.4s;
+}
+#page-top a {
+  position: relative;
+  background: #FF8F3D;
+  text-decoration: none;
+  color: #fff;
+  @include wide(60);
+  @include spwide(60);
+  @include height(60);
+  @include spheight(60);
+  text-align: center;
+  display: block;
+  border-radius: 90px;
+  transition: 0.4s;
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    opacity: 1;
+    background: #fff;
+    @include wide(18);
+    @include height(22);
+    @include spwide(18);
+    @include spheight(22);
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  @include media-tbpc {
+    &:hover {
+      background: #fff;
+      &:before {
+        background: #FF8F3D;
+        .filmbddvd & {
+          background: #0BBDFC;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  .inner {
+    position: relative;
+    margin: 0 auto;
+    @include padding(40,20,40,20);
+    @include sppadding(30,32,20,32);
+    @include media-sp {
+      width: 100%;
+    }
+  }
+  .inner {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    @include media-sp {
+      flex-direction: column;
+    }
+  }
+  .l {
+    a {
+      text-decoration: underline;
+      color: #000 !important;
+      @include media-tbpc {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .t01 {
+      font-weight: 900;
+      @include fz(28);
+      @include spfz(32);
+      span {
+        @include fz(20);
+      @include spfz(24);
+      }
+    }
+    .t02 {
+      @include fz(20);
+      @include spfz(24);
+      margin-top: 1em;
+      @include media-sp {
+        margin-top: 0.7em;
+      }
+    }
+  }
+  .r {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include spmt(40);
+    ul.nav {
+      display: flex;
+      @include fz(20);
+      @include spfz(26);
+      @include media-sp {
+        justify-content: center;
+      }
+      li {
+        line-height: 1;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        border-right: 1px solid #fff;
+        &:first-child {
+          border-left: 1px solid #fff;
+        }
+      }
+      a,button {
+        padding: 0;
+        color: #fff;
+        @include fade_under;
+        padding-bottom: 0;
+      }
+    }
+    .copy {
+      font-weight: 400;
+      @include fz(20);
+      @include spfz(24);
+      @include spmt(40);
+      @include media-sp {
+        text-align: center;
+      }
+    }
+  }
+}

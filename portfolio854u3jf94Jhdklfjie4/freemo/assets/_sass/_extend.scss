@@ -1,0 +1,26 @@
+//---------------------------------------------------------
+
+//見出し
+%title {
+	@include media-sp {
+	}
+	@include media-tbpc {
+	}
+}
+
+//---------------------------------------------------------
+
+//フォント
+%font-zenkaku {
+	font-family: "Zen Kaku Gothic New", sans-serif;
+}
+%font-notosans {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+//---------------------------------------------------------
+
+//矢印あり白ボタン
+%button-white {
+	
+}

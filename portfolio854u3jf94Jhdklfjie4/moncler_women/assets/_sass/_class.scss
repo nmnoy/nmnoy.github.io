@@ -1,0 +1,607 @@
+.disc {
+  padding-left: 1.2em;
+  li {
+    list-style: disc;
+    margin-top: 0.3em;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+.decimal {
+  padding-left: 1.2em;
+  li {
+    list-style: decimal;
+    margin-top: 0.3em;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.tdeco_under {
+	text-decoration: underline;
+}
+.center {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.align_center {
+	text-align: center !important;
+}
+
+.align_right {
+	text-align: right !important;
+}
+
+.align_left {
+	text-align: left !important;
+	text-align: justify !important;
+}
+
+.align_left_noj {
+	text-align: left !important;
+}
+
+.sp_align_center {
+	@include media-sp {
+		text-align: center !important;
+	}
+}
+
+.sp_align_right {
+	@include media-sp {
+		text-align: right !important;
+	}
+}
+
+.sp_align_left {
+	@include media-sp {
+		text-align: left !important;
+		text-align: justify !important;
+	}
+}
+
+.dblock {
+	display: block !important;
+}
+.dib {
+	display: inline-block !important;
+}
+.spblock {
+	@include media-sp {
+		display: block;
+		min-width: 0 !important;
+		width: auto !important;
+	}
+}
+.sptable {
+	@include media-sp {
+		display: table !important;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.fz10 {
+  @include fz(10);
+}
+.fz11 {
+  @include fz(11);
+}
+.fz12 {
+  @include fz(12);
+}
+.fz13 {
+  @include fz(13);
+}
+.fz14 {
+  @include fz(14);
+}
+.fz15 {
+  @include fz(15);
+}
+.fz16 {
+  @include fz(16);
+}
+.fz17 {
+  @include fz(17);
+}
+.fz18 {
+  @include fz(18);
+}
+.fz19 {
+  @include fz(19);
+}
+.fz20 {
+  @include fz(20);
+}
+.fz21 {
+  @include fz(21);
+}
+.fz22 {
+  @include fz(22);
+}
+.fz23 {
+  @include fz(23);
+}
+.fz24 {
+  @include fz(24);
+}
+.fz25 {
+  @include fz(25);
+}
+.fz26 {
+  @include fz(26);
+}
+.fz27 {
+  @include fz(27);
+}
+.fz28 {
+  @include fz(28);
+}
+.fz29 {
+  @include fz(29);
+}
+.fz30 {
+  @include fz(30);
+}
+.fz31 {
+  @include fz(31);
+}
+.fz32 {
+  @include fz(32);
+}
+.fz33 {
+  @include fz(33);
+}
+.fz34 {
+  @include fz(34);
+}
+.fz35 {
+  @include fz(35);
+}
+.fz36 {
+  @include fz(36);
+}
+.fz37 {
+  @include fz(37);
+}
+.fz38 {
+  @include fz(38);
+}
+.fz39 {
+  @include fz(39);
+}
+.fz40 {
+  @include fz(40);
+}
+
+//sp
+.spfz10 {
+  @include spfz(10);
+}
+.spfz11 {
+  @include spfz(11);
+}
+.spfz12 {
+  @include spfz(12);
+}
+.spfz13 {
+  @include spfz(13);
+}
+.spfz14 {
+  @include spfz(14);
+}
+.spfz15 {
+  @include spfz(15);
+}
+.spfz16 {
+  @include spfz(16);
+}
+.spfz17 {
+  @include spfz(17);
+}
+.spfz18 {
+  @include spfz(18);
+}
+.spfz19 {
+  @include spfz(19);
+}
+.spfz20 {
+  @include spfz(20);
+}
+.spfz21 {
+  @include spfz(21);
+}
+.spfz22 {
+  @include spfz(22);
+}
+.spfz23 {
+  @include spfz(23);
+}
+.spfz24 {
+  @include spfz(24);
+}
+.spfz25 {
+  @include spfz(25);
+}
+.spfz26 {
+  @include spfz(26);
+}
+.spfz27 {
+  @include spfz(27);
+}
+.spfz28 {
+  @include spfz(28);
+}
+.spfz29 {
+  @include spfz(29);
+}
+.spfz30 {
+  @include spfz(30);
+}
+.spfz31 {
+  @include spfz(31);
+}
+.spfz32 {
+  @include spfz(32);
+}
+.spfz33 {
+  @include spfz(33);
+}
+.spfz34 {
+  @include spfz(34);
+}
+.spfz35 {
+  @include spfz(35);
+}
+.spfz36 {
+  @include spfz(36);
+}
+.spfz37 {
+  @include spfz(37);
+}
+.spfz38 {
+  @include spfz(38);
+}
+.spfz39 {
+  @include spfz(39);
+}
+.spfz40 {
+  @include spfz(40);
+}
+
+
+.mt0 {
+  @include mt(0);
+}
+.mt10 {
+  @include mt(10);
+}
+.mt20 {
+  @include mt(20);
+}
+.mt30 {
+  @include mt(30);
+}
+.mt40 {
+  @include mt(40);
+}
+.mt50 {
+  @include mt(50);
+}
+.mt60 {
+  @include mt(60);
+}
+.mt70 {
+  @include mt(70);
+}
+.mt80 {
+  @include mt(80);
+}
+.mt90 {
+  @include mt(90);
+}
+.mt100 {
+  @include mt(100);
+}
+.mt110 {
+  @include mt(110);
+}
+.mt120 {
+  @include mt(120);
+}
+
+.spmt0 {
+  @include spmt(0);
+}
+.spmt10 {
+  @include spmt(10);
+}
+.spmt20 {
+  @include spmt(20);
+}
+.spmt30 {
+  @include spmt(30);
+}
+.spmt40 {
+  @include spmt(40);
+}
+.spmt50 {
+  @include spmt(50);
+}
+.spmt60 {
+  @include spmt(60);
+}
+.spmt70 {
+  @include spmt(70);
+}
+.spmt80 {
+  @include spmt(80);
+}
+.spmt90 {
+  @include spmt(90);
+}
+.spmt100 {
+  @include spmt(100);
+}
+.spmt110 {
+  @include spmt(110);
+}
+.spmt120 {
+  @include spmt(120);
+}
+
+
+.mb0 {
+  @include mb(0);
+}
+.mb10 {
+  @include mb(10);
+}
+.mb20 {
+  @include mb(20);
+}
+.mb30 {
+  @include mb(30);
+}
+.mb40 {
+  @include mb(40);
+}
+.mb50 {
+  @include mb(50);
+}
+.mb60 {
+  @include mb(60);
+}
+.mb70 {
+  @include mb(70);
+}
+.mb80 {
+  @include mb(80);
+}
+.mb90 {
+  @include mb(90);
+}
+.mb100 {
+  @include mb(100);
+}
+.mb110 {
+  @include mb(110);
+}
+.mb120 {
+  @include mb(120);
+}
+
+.spmb0 {
+  @include spmb(0);
+}
+.spmb10 {
+  @include spmb(10);
+}
+.spmb20 {
+  @include spmb(20);
+}
+.spmb30 {
+  @include spmb(30);
+}
+.spmb40 {
+  @include spmb(40);
+}
+.spmb50 {
+  @include spmb(50);
+}
+.spmb60 {
+  @include spmb(60);
+}
+.spmb70 {
+  @include spmb(70);
+}
+.spmb80 {
+  @include spmb(80);
+}
+.spmb90 {
+  @include spmb(90);
+}
+.spmb100 {
+  @include spmb(100);
+}
+.spmb110 {
+  @include spmb(110);
+}
+.spmb120 {
+  @include spmb(120);
+}
+
+
+.ml0 {
+  @include ml(0);
+}
+.ml10 {
+  @include ml(10);
+}
+.ml20 {
+  @include ml(20);
+}
+.ml30 {
+  @include ml(30);
+}
+.ml40 {
+  @include ml(40);
+}
+.ml50 {
+  @include ml(50);
+}
+.ml60 {
+  @include ml(60);
+}
+.ml70 {
+  @include ml(70);
+}
+.ml80 {
+  @include ml(80);
+}
+.ml90 {
+  @include ml(90);
+}
+.ml100 {
+  @include ml(100);
+}
+.ml110 {
+  @include ml(110);
+}
+.ml120 {
+  @include ml(120);
+}
+
+.spml0 {
+  @include spml(0);
+}
+.spml10 {
+  @include spml(10);
+}
+.spml20 {
+  @include spml(20);
+}
+.spml30 {
+  @include spml(30);
+}
+.spml40 {
+  @include spml(40);
+}
+.spml50 {
+  @include spml(50);
+}
+.spml60 {
+  @include spml(60);
+}
+.spml70 {
+  @include spml(70);
+}
+.spml80 {
+  @include spml(80);
+}
+.spml90 {
+  @include spml(90);
+}
+.spml100 {
+  @include spml(100);
+}
+.spml110 {
+  @include spml(110);
+}
+.spml120 {
+  @include spml(120);
+}
+
+
+.mr0 {
+  @include mr(0);
+}
+.mr10 {
+  @include mr(10);
+}
+.mr20 {
+  @include mr(20);
+}
+.mr30 {
+  @include mr(30);
+}
+.mr40 {
+  @include mr(40);
+}
+.mr50 {
+  @include mr(50);
+}
+.mr60 {
+  @include mr(60);
+}
+.mr70 {
+  @include mr(70);
+}
+.mr80 {
+  @include mr(80);
+}
+.mr90 {
+  @include mr(90);
+}
+.mr100 {
+  @include mr(100);
+}
+.mr110 {
+  @include mr(110);
+}
+.mr120 {
+  @include mr(120);
+}
+
+.spmr0 {
+  @include spmr(0);
+}
+.spmr10 {
+  @include spmr(10);
+}
+.spmr20 {
+  @include spmr(20);
+}
+.spmr30 {
+  @include spmr(30);
+}
+.spmr40 {
+  @include spmr(40);
+}
+.spmr50 {
+  @include spmr(50);
+}
+.spmr60 {
+  @include spmr(60);
+}
+.spmr70 {
+  @include spmr(70);
+}
+.spmr80 {
+  @include spmr(80);
+}
+.spmr90 {
+  @include spmr(90);
+}
+.spmr100 {
+  @include spmr(100);
+}
+.spmr110 {
+  @include spmr(110);
+}
+.spmr120 {
+  @include spmr(120);
+}

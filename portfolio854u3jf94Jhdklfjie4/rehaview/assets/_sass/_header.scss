@@ -1,0 +1,139 @@
+header {
+  img {
+    vertical-align: bottom;
+  }
+  width: 100%;
+  // min-width: 1280px;
+  @include media-sp {
+    min-width: 0;
+  }
+  position: absolute;
+  #h_logo {
+    line-height: 1;
+    width: 179px;
+    @include spwide(150);
+  }
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  .in {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    @include sppadding(30,30,30,30);
+    .gnav_wrap {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+      .sp_nav {
+        z-index: 99;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        // margin-right: 10px;
+        &.is-active {
+          left: 0;
+        }
+        background-color: #000;
+        margin-right: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        flex-direction: column;
+        overflow-y: scroll;
+        top: 0;
+        left: 100%;
+        transition: left .4s;
+        ul.gnav {
+          width: 100%;
+          flex-direction: column;
+          gap: 0 30px;
+          @include spgap(30,0);
+          li {
+            text-align: center;
+            a {
+              color: #fff;
+              font-weight: 700;
+              span {
+                background: linear-gradient(#fff, #fff) 0 100%/0 1px no-repeat;
+              }
+            }
+          }
+        }
+      }
+      ul.gnav {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        gap: 0 30px;
+        // margin-right: 40px;
+        li {
+          a {
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            @include spfz(14);
+            span {
+              @include fade_under;
+            }
+          }
+        }
+      }
+    }
+    .ham {
+      position: fixed;
+      @include sptop(20);
+      @include spright(30);
+      z-index: 100;
+      cursor: pointer;
+      @include spwide(60);
+      @include spheight(60);
+      span {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+      }
+      span::after,
+      span::before {
+        position: absolute;
+        @include sptop(24);
+        content: '';
+        width: 100%;
+        @include spheight(6);
+        display: block;
+        background: #000;
+        transition: transform .3s,background-color .3s;
+        @include spradius(10,10,10,10);
+      }
+
+      span::before {
+        transform: translateY(-0.595em);
+        // box-shadow: 0 0.595em 0 #000;
+      }
+
+      span::after {
+        transform: translateY(0.595em)
+      }
+      &.is-active span::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+        background: #fff;
+        transition: transform .3s,background-color .3s;
+      }
+      &.is-active span::after {
+        transform: rotate(-45deg);
+        background: #fff;
+        transition: transform .3s,background-color .3s;
+      }
+    }
+  }
+
+}

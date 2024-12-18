@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="90" viewBox="0 0 90 90">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_1305" data-name="長方形 1305" width="90" height="90" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_1621" data-name="グループ 1621" style="mix-blend-mode: multiply;isolation: isolate">
+    <g id="グループ_1620" data-name="グループ 1620">
+      <g id="グループ_1619" data-name="グループ 1619" clip-path="url(#clip-path)">
+        <path id="パス_806" data-name="パス 806" d="M90,0V90H0Z" fill="#fff148"/>
+      </g>
+    </g>
+  </g>
+</svg>

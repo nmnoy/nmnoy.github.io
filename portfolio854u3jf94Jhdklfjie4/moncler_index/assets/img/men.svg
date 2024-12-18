@@ -1,0 +1,18 @@
+<svg id="men.svg" xmlns="http://www.w3.org/2000/svg" width="115" height="317" viewBox="0 0 115 317">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 160px;
+        font-family: "Moncler Gothic";
+        font-weight: 200;
+        text-transform: uppercase;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <text id="men" class="cls-1" transform="translate(4.442 -6.716) rotate(90)">men</text>
+  <text id="men-2" data-name="men" class="cls-2" transform="translate(4.442 -16.718) rotate(90)">men</text>
+</svg>

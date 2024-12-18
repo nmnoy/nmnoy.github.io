@@ -1,0 +1,360 @@
+///////////////////////////////////////////////////////////////
+
+//MIXIN
+
+///////////////////////////////////////////////////////////////
+
+@mixin fullsize {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}
+@mixin trans {
+	transition: all .4s;
+}
+@mixin fade {
+	@include trans;
+	opacity: 1;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+////////vertical_write
+@mixin v {
+  height: max-content;
+	text-orientation: upright;
+	-webkit-text-orientation: upright;
+	writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-webkit-font-feature-settings: 'halt';
+	font-feature-settings: 'halt';
+	text-align: left;
+  text-align: justify;
+  letter-spacing: 0.1em;
+}
+@mixin h {
+  height: auto;
+	text-orientation: mixed;
+	-webkit-text-orientation: mixed;
+	writing-mode: horizontal-tb;
+	-ms-writing-mode: horizontal-tb;
+	-webkit-writing-mode: horizontal-tb;
+	-webkit-font-feature-settings: normal;
+	font-feature-settings: normal;
+	text-align: left;
+  text-align: justify;
+  letter-spacing: 0.1em;
+}
+
+
+
+$contentPc: 1140;
+$contentSp: 750;
+
+@mixin top($px) {
+  top: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-tbpc {
+    top: $px + px;
+  }
+  @include media-sp {
+    top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin bottom($px) {
+  bottom: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-tbpc {
+    bottom: $px + px;
+  }
+  @include media-sp {
+    bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin left($px) {
+  left: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-tbpc {
+    left: $px + px;
+  }
+  @include media-sp {
+    left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin right($px) {
+  right: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-tbpc {
+    right: $px + px;
+  }
+  @include media-sp {
+    right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin sptop($px) {
+  @include media-sp {
+    top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin spbottom($px) {
+  @include media-sp {
+    bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin spleft($px) {
+  @include media-sp {
+    left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin spright($px) {
+  @include media-sp {
+    right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin wide($px) {
+  width: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  max-width: $px + px;
+  @include media-sp {
+    width: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin spwide($px) {
+  @include media-sp {
+    width: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+    max-width: 100%;
+  }
+}
+
+@mixin height($px) {
+  height: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  max-height: $px + px;
+  @include media-sp {
+    height: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+@mixin spheight($px) {
+  @include media-sp {
+    height: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+
+/////////////////////////
+//PC font-size
+/////////////////////////
+
+@mixin fz($px) {
+	font-size: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+	@include media-pc {
+		font-size: $px + px;
+	}
+  @include media-sp {
+    font-size: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+	}
+}
+
+/////////////////////////
+//SP font-size
+/////////////////////////
+
+@mixin spfz($px) {
+  @include media-sp {
+    font-size: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC margin-top
+/////////////////////////
+
+@mixin mt($px) {
+  margin-top: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    margin-top: $px + px;
+  }
+  @include media-sp {
+    margin-top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//SP margin-top
+/////////////////////////
+@mixin spmt($px) {
+  @include media-sp {
+    margin-top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC margin-bottom
+/////////////////////////
+
+@mixin mb($px) {
+  margin-bottom: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    margin-bottom: $px + px;
+  }
+  @include media-sp {
+    margin-bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//SP margin-bottom
+/////////////////////////
+@mixin spmb($px) {
+  @include media-sp {
+    margin-bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC margin-left
+/////////////////////////
+
+@mixin ml($px) {
+  margin-left: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    margin-left: $px + px;
+  }
+  @include media-sp {
+    margin-left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//SP margin-left
+/////////////////////////
+@mixin spml($px) {
+  @include media-sp {
+    margin-left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC margin-right
+/////////////////////////
+
+@mixin mr($px) {
+  margin-right: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    margin-right: $px + px;
+  }
+  @include media-sp {
+    margin-right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//SP margin-right
+/////////////////////////
+@mixin spmr($px) {
+  @include media-sp {
+    margin-right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+
+/////////////////////////
+//PC padding-top
+/////////////////////////
+
+@mixin pt($px) {
+  padding-top: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    padding-top: $px + px;
+  }
+  @include media-sp {
+    padding-top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//SP padding-top
+/////////////////////////
+@mixin sppt($px) {
+  @include media-sp {
+    padding-top: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC padding-bottom
+/////////////////////////
+
+@mixin pb($px) {
+  padding-bottom: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    padding-bottom: $px + px;
+  }
+  @include media-sp {
+    padding-bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//SP padding-bottom
+/////////////////////////
+@mixin sppb($px) {
+  @include media-sp {
+    padding-bottom: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC padding-left
+/////////////////////////
+
+@mixin pl($px) {
+  padding-left: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    padding-left: $px + px;
+  }
+  @include media-sp {
+    padding-left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//SP padding-left
+/////////////////////////
+@mixin sppl($px) {
+  @include media-sp {
+    padding-left: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//PC padding-right
+/////////////////////////
+
+@mixin pr($px) {
+  padding-right: calc( var(--vw) * calc(#{$px} / #{$contentPc} * 100));
+  @include media-pc {
+    padding-right: $px + px;
+  }
+  @include media-sp {
+    padding-right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
+
+/////////////////////////
+//SP padding-right
+/////////////////////////
+@mixin sppr($px) {
+  @include media-sp {
+    padding-right: calc( var(--vw) * calc(#{$px} / #{$contentSp} * 100));
+  }
+}
